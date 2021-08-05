@@ -41,7 +41,7 @@ function ListarProdutos() {
                         className="buttonCard"
                         onclick={(event) => handleComprar(event, produto)}
                     >
-                        Comprar ({produto.preco})
+                        Comprar {`R$${produto.preco}`}
                     </Button>
                 </Card.Body>
             </Card>
