@@ -6,8 +6,9 @@ import {
     faCashRegister,
     faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
+import PropTypes from "prop-types";
 
-function Menu() {
+function Menu(props) {
     return (
         <Navbar bg="dark" variant="dark">
             <Navbar.Brand href="">Pay&#38;Take</Navbar.Brand>
@@ -22,7 +23,7 @@ function Menu() {
                         }
                         drop="left"
                     >
-                        <NavDropdown.Item href="">
+                        <NavDropdown.Item href="" onClick={props.handleExibirProdutos}>
                             <FontAwesomeIcon icon={faShoppingBasket} />
                             &nbsp;
                             <strong>Produtos</strong>
@@ -35,10 +36,9 @@ function Menu() {
                         <NavDropdown.Item href="" data-testid="total-carrinho">
                             Total: R$ {/*será substituido por função*/}
                         </NavDropdown.Item>
-                        <span>
-                            {/* verificar qtd de prosutos para exibir ou não o botão */}
+                        <span className={props.produtos.length === 0 ? "hidden" : null}>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="">
+                            <NavDropdown.Item href="" onClick={props.handleExibirCheckout}>
                                 <FontAwesomeIcon icon={faCashRegister} />
                                 &nbsp;
                                 <strong>Finalizar compra</strong>
@@ -50,5 +50,11 @@ function Menu() {
         </Navbar>
     );
 }
+
+Menu.propTypes = {
+    produtos: PropTypes.array.isRequired,
+    handleExibirProdutos: PropTypes.func.isRequired,
+    handleExibirCheckout: PropTypes.func.isRequired,
+};
 
 export default Menu;
