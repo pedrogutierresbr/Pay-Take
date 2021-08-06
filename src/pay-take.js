@@ -6,7 +6,6 @@ import "./pay-take.css";
 import Menu from "./components/menu/menu";
 import Produtos from "./components/produtos/produtos";
 import Checkout from "./components/checkout/checkout";
-import { object } from "prop-types";
 
 function PayTake() {
     //estados principáis da aplicação
@@ -39,7 +38,6 @@ function PayTake() {
 
     return (
         <div className="">
-            <h1>Pay&#38;Take</h1>
             <Menu />
             <Produtos visivel={exibirProdutos} adicionarProduto={adicionarProduto} />
             <Checkout />
