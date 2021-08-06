@@ -1,9 +1,11 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
+import PropTypes from "prop-types";
+
 import placeholder from "../../images/286x180.png";
 import "./listar-produtos.css";
 
-function ListarProdutos() {
+function ListarProdutos(props) {
     // Para exemplificar criei um array, porem aqui poderia ser uma API
     const produtos = [
         { nome: "Aprenda TypeScript", preco: "57,90" },
@@ -19,7 +21,9 @@ function ListarProdutos() {
     function handleComprar(event, produto) {
         event.preventDefault();
         // adicionar o produto no carrinho
+        props.adicionarProduto(produto);
         // exibir mensagem que produto foi adicionado ao carrinho
+        props.exibirMensagem(produto);
     }
 
     function render() {
@@ -51,5 +55,10 @@ function ListarProdutos() {
 
     return render();
 }
+
+ListarProdutos.propTypes = {
+    adicionarProduto: PropTypes.func.isRequired,
+    exibirMensagem: PropTypes.func.isRequired,
+};
 
 export default ListarProdutos;
