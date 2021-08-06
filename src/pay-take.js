@@ -14,11 +14,13 @@ function PayTake() {
     const [exibirCheckout, setExibirCheckout] = useState(false);
     const [total, setTotal] = useState("0,00");
 
+    function adicionarProduto(produto) {}
+
     return (
         <div className="">
             <h1>Pay&#38;Take</h1>
             <Menu />
-            <Produtos />
+            <Produtos visivel={exibirProdutos} adicionarProduto={adicionarProduto} />
             <Checkout />
         </div>
     );

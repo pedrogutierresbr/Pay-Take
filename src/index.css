@@ -1,3 +1,21 @@
+.cardProduto {
+    width: 18rem;
+    margin: 10px;
+    float: left;
+}
+
+.cardTitle {
+    height: 40px;
+}
+
+.buttonCard {
+    width: 100%;
+}
+
 .hidden {
     display: none;
+}
+
+.alerta {
+    margin: 10px;
 }

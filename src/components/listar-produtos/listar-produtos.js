@@ -3,7 +3,6 @@ import { Card, Button } from "react-bootstrap";
 import PropTypes from "prop-types";
 
 import placeholder from "../../images/286x180.png";
-import "./listar-produtos.css";
 
 function ListarProdutos(props) {
     // Para exemplificar criei um array, porem aqui poderia ser uma API
@@ -43,7 +42,7 @@ function ListarProdutos(props) {
                     <Button
                         variant="success"
                         className="buttonCard"
-                        onclick={(event) => handleComprar(event, produto)}
+                        onClick={(event) => handleComprar(event, produto)}
                     >
                         Comprar {`R$${produto.preco}`}
                     </Button>
