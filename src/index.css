@@ -23,3 +23,7 @@
 .dropDown {
     display: inline-block;
 }
+
+.finalizarCompra {
+    color: green !important;
+}

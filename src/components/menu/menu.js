@@ -8,6 +8,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import PropTypes from "prop-types";
 
+//components
+import ItensCarrinhoMenu from "../itens-carrinho-menu/itens-carrinho-menu";
+
 function Menu(props) {
     function calcularTotal() {
         if (props.produtos.length === 0) {
@@ -41,9 +44,7 @@ function Menu(props) {
                             <strong>Produtos</strong>
                         </NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="">
-                            {/*será substituido por componente*/}
-                        </NavDropdown.Item>
+                        <ItensCarrinhoMenu produtos={props.produtos} />
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="" data-testid="total-carrinho">
                             Total: R${calcularTotal()}
@@ -52,6 +53,7 @@ function Menu(props) {
                             <NavDropdown.Divider />
                             <NavDropdown.Item
                                 href=""
+                                className="finalizarCompra"
                                 onClick={() => props.handleExibirCheckout(calcularTotal())}
                             >
                                 <FontAwesomeIcon icon={faCashRegister} />
