@@ -6,6 +6,10 @@
     display: none;
 }
 
+.navbar {
+    padding: 0.5rem 2rem !important;
+}
+
 .dropDown {
     display: inline-block;
 }
