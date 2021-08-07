@@ -26,7 +26,7 @@ describe("Teste do componente de listagem de produtos", () => {
         const { getByTestId } = render(
             <ListarProdutos adicionarProduto={() => false} exibirMensagem={() => false} />
         );
-        expect(getByTestId("card1")).toHaveTextContent("Comprar R$57,90");
-        expect(getByTestId("card7")).toHaveTextContent("Comprar R$27,90");
+        expect(getByTestId("card1")).toHaveTextContent("Comprar R$ 57,90");
+        expect(getByTestId("card7")).toHaveTextContent("Comprar R$ 27,90");
     });
 });
