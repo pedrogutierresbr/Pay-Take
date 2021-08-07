@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Button } from "react-bootstrap";
 import PropTypes from "prop-types";
 
-import placeholder from "../../images/286x180.png";
+import placeholder from "../../../images/286x180.png";
 
 function ListarProdutos(props) {
     // Para exemplificar criei um array, porem aqui poderia ser uma API

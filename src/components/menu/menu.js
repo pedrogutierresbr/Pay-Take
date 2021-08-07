@@ -9,7 +9,7 @@ import {
 import PropTypes from "prop-types";
 
 //components
-import ItensCarrinhoMenu from "../itens-carrinho-menu/itens-carrinho-menu";
+import ItensCarrinhoMenu from "./itens-carrinho-menu/itens-carrinho-menu";
 
 function Menu(props) {
     function calcularTotal() {

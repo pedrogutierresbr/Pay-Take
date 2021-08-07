@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ListarProdutos from "../listar-produtos/listar-produtos";
+import ListarProdutos from "./listar-produtos/listar-produtos";
 import Alert from "react-bootstrap/Alert";
 import PropTypes from "prop-types";
 
