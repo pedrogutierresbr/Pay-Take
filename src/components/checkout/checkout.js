@@ -7,6 +7,9 @@ import "react-datepicker/dist/react-datepicker.css";
 import DatePicker, { registerLocale } from "react-datepicker";
 import pt from "date-fns/locale/pt";
 
+//components
+import ListarEstados from "./listar-estados/listar-estados";
+
 registerLocale("pt", pt);
 
 function Checkout(props) {
@@ -107,7 +110,7 @@ function Checkout(props) {
                     </Form.Label>
                     <Col sm={9}>
                         <Form.Control as="select" name="estado" data-testid="estado">
-                            {/* Listar os estados aqui */}
+                            <ListarEstados />
                         </Form.Control>
                         <Form.Control.Feedback type="invalid">
                             Selecione o seu estado
