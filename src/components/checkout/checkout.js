@@ -11,7 +11,7 @@ registerLocale("pt", pt);
 
 function Checkout(props) {
     return (
-        <Jumbotron className="">
+        <Jumbotron fluid className="jumbo">
             <h3 className="text-center">Finalizar compra</h3>
 
             <Form noValidate className="container mt-5">
@@ -188,6 +188,32 @@ function Checkout(props) {
                     </Col>
                 </Form.Group>
             </Form>
+
+            <Modal show={false} data-testid="modal-compra-sucesso">
+                <Modal.Header closeButton>
+                    <Modal.Title>Compra realizada com sucesso!</Modal.Title>
+                </Modal.Header>
+
+                <Modal.Body>
+                    Um email de confirmação foi enviado com os detalhes da sua compra.
+                </Modal.Body>
+
+                <Modal.Footer>
+                    <Button variant="success">Continuar</Button>
+                </Modal.Footer>
+            </Modal>
+
+            <Modal show={false} data-testid="modal-erro-comprar">
+                <Modal.Header closeButton>
+                    <Modal.Title>Erro ao processar pedido</Modal.Title>
+                </Modal.Header>
+
+                <Modal.Body>Tente novamente em alguns instantes...</Modal.Body>
+
+                <Modal.Footer>
+                    <Button variant="warning">Fechar</Button>
+                </Modal.Footer>
+            </Modal>
         </Jumbotron>
     );
 }
