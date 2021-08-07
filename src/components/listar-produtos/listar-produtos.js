@@ -7,14 +7,14 @@ import placeholder from "../../images/286x180.png";
 function ListarProdutos(props) {
     // Para exemplificar criei um array, porem aqui poderia ser uma API
     const produtos = [
-        { nome: "Aprenda TypeScript", preco: "57,90" },
-        { nome: "JavaScript em 7 dias", preco: "55,30" },
-        { nome: "React do básico ao avançado", preco: "62,20" },
-        { nome: "Algoritmos e Lógica de programação", preco: "19,90" },
-        { nome: "Testes Unitários com Jest", preco: "33,20" },
-        { nome: "Node Js na prática", preco: "52,90" },
-        { nome: "Tudo sobre Mongo DB", preco: "27,90" },
-        { nome: "Python do básico ao primeiro projeto", preco: "121,30" },
+        { nome: "Aprenda TypeScript", preco: "R$ 57,90" },
+        { nome: "JavaScript em 7 dias", preco: "R$ 55,30" },
+        { nome: "React do básico ao avançado", preco: "R$ 62,20" },
+        { nome: "Algoritmos e Lógica de programação", preco: "R$ 19,90" },
+        { nome: "Testes Unitários com Jest", preco: "R$ 33,20" },
+        { nome: "Node Js na prática", preco: "R$ 52,90" },
+        { nome: "Tudo sobre Mongo DB", preco: "R$ 27,90" },
+        { nome: "Python do básico ao primeiro projeto", preco: "R$ 121,30" },
     ];
 
     function handleComprar(event, produto) {
@@ -44,7 +44,7 @@ function ListarProdutos(props) {
                         className="buttonCard"
                         onClick={(event) => handleComprar(event, produto)}
                     >
-                        Comprar {`R$${produto.preco}`}
+                        Comprar {produto.preco}
                     </Button>
                 </Card.Body>
             </Card>

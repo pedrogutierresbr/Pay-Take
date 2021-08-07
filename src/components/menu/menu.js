@@ -9,6 +9,18 @@ import {
 import PropTypes from "prop-types";
 
 function Menu(props) {
+    function calcularTotal() {
+        if (props.produtos.length === 0) {
+            return "0,00";
+        }
+        let total = 0;
+        props.produtos.forEach((produto) => {
+            let preco = produto.preco.replace(",", ".").replace("R$ ", "");
+            total += parseFloat(preco) * produto.quantidade;
+        });
+        return total.toFixed(2).toString().replace(".", ",");
+    }
+
     return (
         <Navbar bg="dark" variant="dark">
             <Navbar.Brand href="">Pay&#38;Take</Navbar.Brand>
@@ -30,15 +42,18 @@ function Menu(props) {
                         </NavDropdown.Item>
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="">
-                            Produto {/*será substituido por componente*/}
+                            {/*será substituido por componente*/}
                         </NavDropdown.Item>
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="" data-testid="total-carrinho">
-                            Total: R$ {/*será substituido por função*/}
+                            Total: R${calcularTotal()}
                         </NavDropdown.Item>
                         <span className={props.produtos.length === 0 ? "hidden" : null}>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="" onClick={props.handleExibirCheckout}>
+                            <NavDropdown.Item
+                                href=""
+                                onClick={() => props.handleExibirCheckout(calcularTotal())}
+                            >
                                 <FontAwesomeIcon icon={faCashRegister} />
                                 &nbsp;
                                 <strong>Finalizar compra</strong>
