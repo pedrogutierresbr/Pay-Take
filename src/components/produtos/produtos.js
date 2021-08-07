@@ -24,10 +24,12 @@ function Produtos(props) {
             <Alert variant="success" className="alerta" show={exibirMsg}>
                 <strong>{produto}</strong> adicionado com sucesso ao carrinho!
             </Alert>
-            <ListarProdutos
-                exibirMensagem={exibirMensagem}
-                adicionarProduto={props.adicionarProduto}
-            />
+            <div className="mt-5 d-flex flex-wrap justify-content-around">
+                <ListarProdutos
+                    exibirMensagem={exibirMensagem}
+                    adicionarProduto={props.adicionarProduto}
+                />
+            </div>
         </div>
     );
 }

@@ -29,7 +29,7 @@ function ListarProdutos(props) {
         let key = 1;
 
         const cards = produtos.map((produto) => (
-            <Card key={key} className="cardProduto" data-testid={"card" + key++}>
+            <Card key={key} className="cardProduto mb-5" data-testid={"card" + key++}>
                 <Card.Img variant="top" src={placeholder} />
                 <Card.Body className="text-center">
                     <Card.Title className="cardTitle">{produto.nome}</Card.Title>

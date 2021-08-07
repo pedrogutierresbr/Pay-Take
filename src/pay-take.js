@@ -54,8 +54,10 @@ function PayTake() {
                 handleExibirProdutos={handleExibirProdutos}
                 handleExibirCheckout={handleExibirCheckout}
             />
-            <Produtos visivel={exibirProdutos} adicionarProduto={adicionarProduto} />
-            <Checkout />
+            <div className="container d-flex flex-column">
+                <Produtos visivel={exibirProdutos} adicionarProduto={adicionarProduto} />
+                <Checkout />
+            </div>
         </div>
     );
 }

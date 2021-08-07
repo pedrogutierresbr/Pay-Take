@@ -1,23 +1,9 @@
-.cardProduto {
-    width: 18rem;
-    margin: 10px;
-    float: left;
-}
-
-.cardTitle {
-    height: 40px;
-}
-
-.buttonCard {
-    width: 100%;
+.alerta {
+    margin: 20px 10px 10px;
 }
 
 .hidden {
     display: none;
-}
-
-.alerta {
-    margin: 10px;
 }
 
 .dropDown {
@@ -26,4 +12,16 @@
 
 .finalizarCompra {
     color: green !important;
+}
+
+.cardProduto {
+    width: 18rem;
+}
+
+.cardTitle {
+    height: 40px;
+}
+
+.buttonCard {
+    width: 100%;
 }
