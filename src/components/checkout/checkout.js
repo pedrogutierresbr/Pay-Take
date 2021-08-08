@@ -77,6 +77,7 @@ function Checkout(props) {
                     termosCondicoes: false,
                     emailPromocional: "S",
                 }}
+                validationSchema={schema}
             >
                 {({ handleSubmit, handleChange, values, touched, errors }) => (
                     <Form noValidate className="container mt-5" onSubmit={handleSubmit}>
