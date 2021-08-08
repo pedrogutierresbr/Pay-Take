@@ -31,6 +31,22 @@ function Checkout(props) {
         return;
     }
 
+    function handleDataNascimento(data) {
+        setDataNascimento(data);
+    }
+
+    function datePickerCss() {
+        if (!formEnviado) {
+            return "form-control";
+        }
+
+        if (dataNascimento) {
+            return "form-control is-valid";
+        } else {
+            return "form-control is-invalid";
+        }
+    }
+
     return (
         <Jumbotron fluid className={visivel()}>
             <h3 className="text-center">Finalizar compra</h3>
@@ -104,9 +120,12 @@ function Checkout(props) {
                                     showMonthDropdown
                                     showYearDropdown
                                     dropdownMode="select"
-                                    dateFormat="dd/mm/yyyy"
+                                    dateFormat="dd/MM/yyyy"
                                     placeholderText="Selecione a data"
                                     withPortal
+                                    selected={dataNascimento}
+                                    onChange={handleDataNascimento}
+                                    className={datePickerCss()}
                                 />
                             </Col>
                         </Form.Group>
