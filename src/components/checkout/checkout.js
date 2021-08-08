@@ -158,7 +158,15 @@ function Checkout(props) {
                                 Estado:
                             </Form.Label>
                             <Col sm={9}>
-                                <Form.Control as="select" name="estado" data-testid="estado">
+                                <Form.Control
+                                    as="select"
+                                    name="estado"
+                                    data-testid="estado"
+                                    value={values.estado}
+                                    onChange={handleChange}
+                                    isValid={touched.estado && !errors.estado}
+                                    isInvalid={touched.estado && !!errors.estado}
+                                >
                                     <ListarEstados />
                                 </Form.Control>
                                 <Form.Control.Feedback type="invalid">
@@ -172,7 +180,15 @@ function Checkout(props) {
                                 Cidade:
                             </Form.Label>
                             <Col sm={9}>
-                                <Form.Control as="select" name="cidade" data-testid="cidade">
+                                <Form.Control
+                                    as="select"
+                                    name="cidade"
+                                    data-testid="cidade"
+                                    value={values.cidade}
+                                    onChange={handleChange}
+                                    isValid={touched.cidade && !errors.cidade}
+                                    isInvalid={touched.cidade && !!errors.cidade}
+                                >
                                     <option value="">Selecione a cidade</option>
                                     <ListarCidades estado={""} />
                                 </Form.Control>
@@ -192,6 +208,10 @@ function Checkout(props) {
                                     name="cep"
                                     placeholder="Digite o seu CEP"
                                     data-testid="txt-cep"
+                                    value={values.cep}
+                                    onChange={handleChange}
+                                    isValid={touched.cep && !errors.cep}
+                                    isInvalid={touched.cep && !!errors.cep}
                                 />
                                 <Form.Control.Feedback type="invalid">
                                     Digite o seu CEP
