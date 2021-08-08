@@ -82,6 +82,10 @@ function Checkout(props) {
                                     name="nomeCompleto"
                                     placeholder="Digite o seu nome completo"
                                     data-testid="txt-nome-completo"
+                                    value={values.nomeCompleto}
+                                    onChange={handleChange}
+                                    isValid={touched.nomeCompleto && !errors.nomeCompleto}
+                                    isInvalid={touched.nomeCompleto && !!errors.nomeCompleto}
                                 />
                                 <Form.Control.Feedback type="invalid">
                                     Digite o seu nome completo (mínimo 5 caracteres)
@@ -117,6 +121,10 @@ function Checkout(props) {
                                     name="cpf"
                                     placeholder="Digite o seu CPF"
                                     data-testid="txt-cpf"
+                                    value={values.cpf}
+                                    onChange={handleChange}
+                                    isValid={touched.cpf && !errors.cpf}
+                                    isInvalid={touched.cpf && !!errors.cpf}
                                 />
                                 <Form.Control.Feedback type="invalid">
                                     Digite um CPF válido
@@ -134,6 +142,10 @@ function Checkout(props) {
                                     name="endereco"
                                     placeholder="Digite o seu endereço completo"
                                     data-testid="txt-endereco"
+                                    value={values.endereco}
+                                    onChange={handleChange}
+                                    isValid={touched.endereco && !errors.endereco}
+                                    isInvalid={touched.endereco && !!errors.endereco}
                                 />
                                 <Form.Control.Feedback type="invalid">
                                     Digite o seu endereço
