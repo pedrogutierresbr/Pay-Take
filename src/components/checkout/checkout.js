@@ -15,6 +15,7 @@ import pt from "date-fns/locale/pt";
 import ListarEstados from "./listar-estados/listar-estados";
 import ListarCidades from "./listar-cidades/listar-cidades";
 import { validarCpf, formatarCpf } from "../../utils/cpf-util";
+import formatarCep from "../../utils/cep-utils";
 
 registerLocale("pt", pt);
 
@@ -251,7 +252,10 @@ function Checkout(props) {
                                     placeholder="Digite o seu CEP"
                                     data-testid="txt-cep"
                                     value={values.cep}
-                                    onChange={handleChange}
+                                    onChange={(e) => {
+                                        e.currentTarget.value = formatarCep(e.currentTarget.value);
+                                        handleChange(e);
+                                    }}
                                     isValid={touched.cep && !errors.cep}
                                     isInvalid={touched.cep && !!errors.cep}
                                 />

@@ -1,4 +1,4 @@
-//Esse código não foi eu quem desenvolvi, ele é baseado em um cálculo próprio para validar o CPF, então eu apenas o encontrie e estou utilizando
+//o cálculo da função validar CPF não foi eu que desenvolvi, foi utilizado da internet
 
 export function formatarCpf(cpf) {
     cpf = cpf.replace(/\D/g, "");
