@@ -9,6 +9,7 @@ import pt from "date-fns/locale/pt";
 
 //components
 import ListarEstados from "./listar-estados/listar-estados";
+import ListarCidades from "./listar-cidades/listar-cidades";
 
 registerLocale("pt", pt);
 
@@ -125,7 +126,7 @@ function Checkout(props) {
                     <Col sm={9}>
                         <Form.Control as="select" name="cidade" data-testid="cidade">
                             <option value="">Selecione a cidade</option>
-                            {/* Listar as cidades aqui */}
+                            <ListarCidades estado={"RJ"} />
                         </Form.Control>
                         <Form.Control.Feedback type="invalid">
                             Selecione a sua cidade
