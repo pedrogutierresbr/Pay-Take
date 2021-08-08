@@ -50,7 +50,7 @@ function Checkout(props) {
                 }}
             >
                 {({ handleSubmit, handleChange, values, touched, errors }) => (
-                    <Form noValidate className="container mt-5">
+                    <Form noValidate className="container mt-5" onSubmit={handleSubmit}>
                         <Form.Group as={Row} controlId="email">
                             <Form.Label column sm={3}>
                                 Email:
@@ -61,6 +61,10 @@ function Checkout(props) {
                                     name="email"
                                     placeholder="Digite o seu email"
                                     data-testid="txt-email"
+                                    value={values.email}
+                                    onChange={handleChange}
+                                    isValid={touched.email && !errors.email}
+                                    isInvalid={touched.email && !!errors.email}
                                 />
                                 <Form.Control.Feedback type="invalid">
                                     Digite um email válido
