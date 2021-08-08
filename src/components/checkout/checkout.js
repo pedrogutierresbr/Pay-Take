@@ -231,6 +231,8 @@ function Checkout(props) {
                                 value="S"
                                 label="Sim"
                                 className="ml-3"
+                                checked={values.emailPromocional === "S"}
+                                onChange={handleChange}
                             />
                             <Form.Check
                                 inline
@@ -240,6 +242,8 @@ function Checkout(props) {
                                 value="N"
                                 label="Não"
                                 className="ml-4"
+                                checked={values.emailPromocional === "N"}
+                                onChange={handleChange}
                             />
                         </Form.Group>
 
@@ -249,6 +253,10 @@ function Checkout(props) {
                                 label="Concordo com os termos e condições"
                                 className="ml-3"
                                 data-testid="check-termos-condicoes"
+                                value={values.termosCondicoes}
+                                onChange={handleChange}
+                                isValid={touched.termosCondicoes && !errors.termosCondicoes}
+                                isInvalid={touched.termosCondicoes && !!errors.termosCondicoes}
                             />
                         </Form.Group>
 
