@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 // Formik
 import { Formik } from "formik";
+import * as yup from "yup";
 
 // Date Picker
 import "react-datepicker/dist/react-datepicker.css";
@@ -22,6 +23,18 @@ function Checkout(props) {
     const [formEnviado, setFormEnviado] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const [erroModal, setErroModal] = useState(false);
+
+    const schema = yup.object({
+        email: yup.string().email().required(),
+        nomeCompleto: yup.string().required().min(5),
+        cpf: yup.string().required().min(14).max(14),
+        endereco: yup.string().min(5).required(),
+        cidade: yup.string().required(),
+        estado: yup.string().required(),
+        cep: yup.string().required().min(9).max(9),
+        emailPromocional: yup.string().required(),
+        termosCondicoes: yup.bool().oneOf([true]),
+    });
 
     function visivel() {
         return props.visivel ? "null jumbo" : "hidden jumbo";
@@ -209,7 +222,7 @@ function Checkout(props) {
                                     isInvalid={touched.cidade && !!errors.cidade}
                                 >
                                     <option value="">Selecione a cidade</option>
-                                    <ListarCidades estado={""} />
+                                    <ListarCidades estado={values.estado} />
                                 </Form.Control>
                                 <Form.Control.Feedback type="invalid">
                                     Selecione a sua cidade
