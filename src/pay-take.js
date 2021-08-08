@@ -47,6 +47,10 @@ function PayTake() {
         setTotal(total);
     }
 
+    function handleLimparCarrinho() {
+        setCarrinho({ produtos: [] });
+    }
+
     return (
         <div className="">
             <Menu
@@ -57,7 +61,13 @@ function PayTake() {
             <div className="container d-flex flex-column">
                 <Produtos visivel={exibirProdutos} adicionarProduto={adicionarProduto} />
             </div>
-            <Checkout />
+            <Checkout
+                visivel={exibirCheckout}
+                handleExibirProdutos={handleExibirProdutos}
+                total={total}
+                produtos={carrinho}
+                handleLimparCarrinho={handleLimparCarrinho}
+            />
         </div>
     );
 }

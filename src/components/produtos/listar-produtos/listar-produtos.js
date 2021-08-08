@@ -15,6 +15,7 @@ function ListarProdutos(props) {
         { nome: "Node Js na prática", preco: "R$ 52,90" },
         { nome: "Tudo sobre Mongo DB", preco: "R$ 27,90" },
         { nome: "Python do básico ao primeiro projeto", preco: "R$ 121,30" },
+        { nome: "Aprenda Jest e testes de software", preco: "R$ 47,30" },
     ];
 
     function handleComprar(event, produto) {

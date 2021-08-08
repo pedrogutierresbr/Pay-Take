@@ -14,8 +14,12 @@ import ListarCidades from "./listar-cidades/listar-cidades";
 registerLocale("pt", pt);
 
 function Checkout(props) {
+    function visivel() {
+        return props.visivel ? "null jumbo" : "hidden jumbo";
+    }
+
     return (
-        <Jumbotron fluid className="jumbo">
+        <Jumbotron fluid className={visivel()}>
             <h3 className="text-center">Finalizar compra</h3>
 
             <Form noValidate className="container mt-5">
@@ -221,5 +225,13 @@ function Checkout(props) {
         </Jumbotron>
     );
 }
+
+Checkout.propTypes = {
+    visivel: PropTypes.bool.isRequired,
+    handleExibirProdutos: PropTypes.func.isRequired,
+    total: PropTypes.string.isRequired,
+    produtos: PropTypes.object.isRequired,
+    handleLimparCarrinho: PropTypes.func.isRequired,
+};
 
 export default Checkout;
