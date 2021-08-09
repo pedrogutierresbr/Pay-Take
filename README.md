@@ -38,7 +38,7 @@ Ter instalado em sua máquina as seguintes ferramentas: [Git](https://git-scm.co
 
 Ter um editor para trabalhar com o código,exemplo: [VSCode](https://code.visualstudio.com/)
 
-Ter o servidor criado para essa aplicação em seu computar, e executá-lo antes desta aplicação. Você pode encontrá-lo em: [Servidor-api-pay-take]()
+Ter o servidor criado para essa aplicação em seu computar, e executá-lo antes desta aplicação. Você pode encontrá-lo em: [Servidor-api-pay-take](https://github.com/pedrogutierresbr/servidor-api-pay-take)
 
 ## Como usar
 
