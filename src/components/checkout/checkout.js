@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Form, Row, Col, Button, Jumbotron, Modal } from "react-bootstrap";
 import PropTypes from "prop-types";
+import axios from "axios";
 
 // Formik
 import { Formik } from "formik";
@@ -16,10 +17,13 @@ import ListarEstados from "./listar-estados/listar-estados";
 import ListarCidades from "./listar-cidades/listar-cidades";
 import { validarCpf, formatarCpf } from "../../utils/cpf-util";
 import formatarCep from "../../utils/cep-utils";
+import FormImpl from "react-bootstrap/esm/Form";
 
 registerLocale("pt", pt);
 
 function Checkout(props) {
+    const CHECKOUT_URL = "http://localhost:3001/pay-take/checkout/finalizar-compra";
+
     //Variaveis de estado para armazenar dados  para funcionalidades do Formik
     const [dataNascimento, setDataNascimento] = useState(null);
     const [formEnviado, setFormEnviado] = useState(false);
@@ -47,8 +51,21 @@ function Checkout(props) {
         return props.visivel ? "null jumbo" : "hidden jumbo";
     }
 
-    function finalizarCompra(values) {
-        return;
+    async function finalizarCompra(dados) {
+        if (!dataNascimento) {
+            setFormEnviado(true);
+            return;
+        }
+        dados.dataNascimento = dataNascimento;
+        dados.produtos = JSON.stringify(props.produtos);
+        dados.total = `R$ ${props.total}`;
+        try {
+            await axios.post(CHECKOUT_URL, dados);
+            setShowModal(true);
+            props.handleLimparCarrinho();
+        } catch (err) {
+            setErroModal(true);
+        }
     }
 
     function handleDataNascimento(data) {
@@ -65,6 +82,15 @@ function Checkout(props) {
         } else {
             return "form-control is-invalid";
         }
+    }
+
+    function handleContinuar() {
+        setShowModal(false);
+        props.handleExibirProdutos();
+    }
+
+    function handleFecharErroModal() {
+        setErroModal(false);
     }
 
     return (
@@ -321,7 +347,7 @@ function Checkout(props) {
                 )}
             </Formik>
 
-            <Modal show={false} data-testid="modal-compra-sucesso">
+            <Modal show={showModal} onHide={handleContinuar} data-testid="modal-compra-sucesso">
                 <Modal.Header closeButton>
                     <Modal.Title>Compra realizada com sucesso!</Modal.Title>
                 </Modal.Header>
@@ -331,11 +357,13 @@ function Checkout(props) {
                 </Modal.Body>
 
                 <Modal.Footer>
-                    <Button variant="success">Continuar</Button>
+                    <Button onClick={handleContinuar} variant="success">
+                        Continuar
+                    </Button>
                 </Modal.Footer>
             </Modal>
 
-            <Modal show={false} data-testid="modal-erro-comprar">
+            <Modal show={erroModal} onHide={handleFecharErroModal} data-testid="modal-erro-comprar">
                 <Modal.Header closeButton>
                     <Modal.Title>Erro ao processar pedido</Modal.Title>
                 </Modal.Header>
@@ -343,7 +371,9 @@ function Checkout(props) {
                 <Modal.Body>Tente novamente em alguns instantes...</Modal.Body>
 
                 <Modal.Footer>
-                    <Button variant="warning">Fechar</Button>
+                    <Button onClick={handleFecharErroModal} variant="warning">
+                        Fechar
+                    </Button>
                 </Modal.Footer>
             </Modal>
         </Jumbotron>

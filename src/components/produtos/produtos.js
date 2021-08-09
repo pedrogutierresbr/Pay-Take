@@ -16,7 +16,7 @@ function Produtos(props) {
         setProduto(produto.nome);
         setTimeout(() => {
             setExibirMsg(false);
-        }, 3000);
+        }, 1000);
     }
 
     return (
