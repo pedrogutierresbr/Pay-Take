@@ -17,7 +17,6 @@ import ListarEstados from "./listar-estados/listar-estados";
 import ListarCidades from "./listar-cidades/listar-cidades";
 import { validarCpf, formatarCpf } from "../../utils/cpf-util";
 import formatarCep from "../../utils/cep-utils";
-import FormImpl from "react-bootstrap/esm/Form";
 
 registerLocale("pt", pt);
 
