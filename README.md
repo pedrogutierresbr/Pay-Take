@@ -2,7 +2,7 @@
 
 ## Sobre o projeto
 
-Este projeto foi desenvolvido com React JS com o objetivo de simular as principais operações feitas em um E-commerce, como adicionar produtos ao carrinho, exibir total da compra, quais produtos estão sendo comprados, redirecionar para uma página de preenchimento de cadstro e finalização da compra. Utilizei o Formik e Yup para criar validações para os campos do formulário, Bootstrap para auxiliar a criar um layout que seja responsivo e Jest para testes unitários.
+Este projeto foi desenvolvido com React JS com o objetivo de simular as principais operações feitas em um E-commerce, como adicionar produtos ao carrinho, exibir total da compra, exibir quais produtos estão sendo comprados, redirecionar para uma página de preenchimento de cadastro e finalização da compra. Utilizei o Formik e Yup para criar validações para os campos do formulário, Bootstrap para auxiliar a criar um layout que seja responsivo e Jest para testes unitários.
 
 ## Demonstração
 
@@ -38,7 +38,7 @@ Ter instalado em sua máquina as seguintes ferramentas: [Git](https://git-scm.co
 
 Ter um editor para trabalhar com o código,exemplo: [VSCode](https://code.visualstudio.com/)
 
-Ter o servidor criado para essa aplicação em seu computar, e executá-lo antes desta aplicação. Você pode encontrá-lo em: [Servidor-api-pay-take](https://github.com/pedrogutierresbr/servidor-api-pay-take)
+Ter o servidor criado para essa aplicação em seu computador e executá-lo antes de executar essa aplicação. Você pode encontrá-lo em: [Servidor-api-pay-take](https://github.com/pedrogutierresbr/servidor-api-pay-take)
 
 ## Como usar
 
