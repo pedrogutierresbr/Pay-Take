@@ -1,72 +1,54 @@
-# In progress
+# Pay&Take mini e-commerce
 
-<!-- # Getting Started with Create React App
+## Sobre o projeto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto foi desenvolvido com React JS com o objetivo de simular as principais operações feitas em um E-commerce, como adicionar produtos ao carrinho, exibir total da compra, quais produtos estão sendo comprados, redirecionar para uma página de preenchimento de cadstro e finalização da compra. Utilizei o Formik e Yup para criar validações para os campos do formulário, Bootstrap para auxiliar a criar um layout que seja responsivo e Jest para testes unitários.
 
-## Available Scripts
+## Demonstração
 
-In the project directory, you can run:
+![Demonstração]()
 
-### `yarn start`
+** Ao final do vídeo coloquei uma demontração de como as informações enviadas pela aplicação chegam ao servidor **
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tecnologias usadas
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+As seguintes ferramentas foram usadas na construção do projeto:
 
-### `yarn test`
+-   HTML
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   CSS
 
-### `yarn build`
+-   JavaScript
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   ReactJS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-   Bootstrap
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   Formik
 
-### `yarn eject`
+-   Yup
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+-   Jest
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Pré-requisitos
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: [Git](https://git-scm.com/) e [Node.js](https://nodejs.org/en/).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Além disto, é bom ter um editor para trabalhar com o código,exemplo: [VSCode](https://code.visualstudio.com/)
 
-## Learn More
+## Como usar
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+# No terminal
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1° - git clone https://github.com/pedrogutierresbr/Pay-and-Take.git -> Para clonar o repositório
 
-### Code Splitting
+2° - npm install -> Para instalar as dependencias necessarias para o projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4° - npm start -> Para iniciar o projeto (Para acessar via browser, digite no navegador: localhost:3000)
+```
 
-### Analyzing the Bundle Size
+# Autor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
+Pedro Gabriel Gutierres de Faria
+See my [LinkedIn](https://www.linkedin.com/in/pedro-gutierres/)
