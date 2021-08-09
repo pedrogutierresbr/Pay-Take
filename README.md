@@ -6,7 +6,7 @@ Este projeto foi desenvolvido com React JS com o objetivo de simular as principa
 
 ## Demonstração
 
-![Demonstração]()
+![Demonstração](https://github.com/pedrogutierresbr/Pay-and-Take/blob/main/public/assets/gif-desktop.gif?raw=true)
 
 ** Ao final do vídeo coloquei uma demontração de como as informações enviadas pela aplicação chegam ao servidor **
 
