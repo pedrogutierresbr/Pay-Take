@@ -47,9 +47,9 @@ Ter o servidor criado para essa aplicação em seu computador e executá-lo ante
 
 1° - git clone https://github.com/pedrogutierresbr/Pay-and-Take.git -> Para clonar o repositório
 
-2° - npm install -> Para instalar as dependencias necessarias para o projeto
+2° - npm install -> Para instalar as dependências necessárias para o projeto
 
-4° - npm start -> Para iniciar o projeto (Para acessar via browser, digite no navegador: localhost:3000)
+4° - npm start -> Para iniciar o projeto (Acesso via browser, digite no navegador: localhost:3000)
 ```
 
 # Autor
